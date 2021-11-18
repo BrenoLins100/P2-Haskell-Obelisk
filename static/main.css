@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 
 *{
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 menu{
@@ -17,10 +17,12 @@ menu{
 
 menu ul{
   display: flex;
+  align-items: center;
 }
 
 menu ul li{
   list-style: none;
+  margin-top: 20px;
 }
 
 menu ul li a{
@@ -31,12 +33,38 @@ menu ul li a{
   text-transform: uppercase;
 }
 
-.container,
-.imagem-dog{
-  padding: 20px;
+h1{
+  padding: 55px;
 }
 
-.imagem-dog img{
+p{
+  padding-left: 55px;
+  font-size: 30px;
+}
+
+.cachorro{
   max-width: 100%;
-  height: auto;
+  height: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.insere{
+  display: flex;
+  align-items: center;
+}
+
+.insere input{
+  margin: 10px;
+  flex: 2;
+  padding: 5px;
+  color: #000;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #ffc107;
+}
+
+.insere .btn{
+  flex: 1;
 }
