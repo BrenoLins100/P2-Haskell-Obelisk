@@ -1,5 +1,5 @@
 {-# LANGUAGE DeriveGeneric #-}
-{-# language DeriveAnyClass #-}
+{-# language DeriveAnyClass  #-}
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE FlexibleContexts #-}
@@ -10,5 +10,27 @@ module Common.Api where
 import Data.Aeson
 import Data.Text (Text)
 import GHC.Generics (Generic)
+import Database.PostgreSQL.Simple
 
-data Cliente = Cliente Text deriving (Generic, ToJSON, FromJSON)
+data Produto = Produto {
+    produtoId :: Int,
+    produtoNome :: Text,
+    produtoValor :: Double,
+    produtoQt :: Int
+} deriving (Generic, ToJSON, FromJSON, ToRow, FromRow, Eq, Show)
+
+data Cliente = Cliente {
+    clienteId :: Int,
+    clienteNome :: Text,
+    clienteCpf :: Int,
+    clienteTel :: Int
+} deriving (Generic, ToJSON, FromJSON, ToRow, FromRow, Eq, Show)
+
+data Fornecedor = Fornecedor {
+    fornecedorId :: Int,
+    fornecedorNome :: Text,
+    fornecedorRg :: Int,
+    fornecedorEmpresa :: Text
+} deriving (Generic, ToJSON, FromJSON, ToRow, FromRow, Eq, Show)
+
+

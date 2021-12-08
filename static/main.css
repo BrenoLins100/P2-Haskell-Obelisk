@@ -1,8 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
 *{
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +17,7 @@ menu{
 
 menu ul{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -29,8 +30,9 @@ menu ul li a{
   text-decoration: none;
   color: #FFF;
   margin: 10px;
-  font-size: 17px;
+  font-size: 13px;
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 h1{
@@ -52,6 +54,12 @@ p{
 .insere{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.insere p{
+  font-size: 17px;
+  margin-top: 10px;
 }
 
 .insere input{
@@ -67,4 +75,162 @@ p{
 
 .insere .btn{
   flex: 1;
+}
+
+.table-responsive{
+  padding: 55px;
+}
+
+.btn-listar{
+  margin-left: 55px;
+  background-color: #2ecc71!important;
+  border: none!important;
+}
+
+/*Container listar -> tabela e botao*/
+.listar button{
+  padding: 8px;
+  color: #000;
+  border-radius: 3px;
+  background-color: #ffc107;
+  border: none;
+}
+
+body > div{
+  padding-left: 43px;
+}
+
+/*Container perfil*/
+
+.perfil,
+.perfil2{
+  padding: 30px;
+}
+
+.perfil button,
+.perfil2 button,
+.insere button{
+  padding: 8px;
+  color: #000;
+  border-radius: 3px;
+  background-color: #ffc107;
+  border: none;
+}
+
+.perfil div,
+.perfil2 div{
+  padding: 10px 0px;
+}
+
+/*Botoes da tabela*/
+
+tr button{
+  padding: 8px;
+  color: #000;
+  border-radius: 3px;
+  background-color: #ffc107!important;
+  border: none;
+  margin-left: 3px;
+}
+
+/*formulario para cadastrar cliente*/
+
+.cliente{
+  display: flex;
+  align-items: center;
+}
+
+.cliente input{
+  margin: 3px;
+  padding: 4px;
+}
+
+.dados{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dados p{
+  display: block;
+  font-size: 16px;
+}
+
+
+.btn-danger{
+  margin-left: 50px!important;
+}
+
+
+/*Exibindo dados cliente,produto,forenecedor*/
+
+.nome-fornecedor::before,
+.rg-fornecedor::before,
+.empresa-fornecedor::before,
+.nome-cliente::before,
+.cpf-cliente::before,
+.tel-cliente::before,
+.nome-produto::before,
+.valor-produto::before,
+.qt-produto::before{
+  color: #2980b9;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nome-fornecedor::before{
+  content: "Fornecedor:";
+}
+
+.nome-cliente::before{
+  content: "Cliente:";
+}
+
+.nome-produto::before{
+  content: "Produto:";
+}
+
+.rg-fornecedor::before{
+  content: "RG:";
+}
+
+.cpf-cliente::before{
+  content: "CPF:";
+}
+
+.tel-cliente::before{
+  content: "Telefone:";
+}
+
+.empresa-fornecedor::before{
+  content: "Empresa:";
+}
+
+.valor-produto::before{
+  content: "Valor:";
+}
+
+.qt-produto::before{
+  content: "Quantidade:";
+}
+
+
+.btn-insere-prod{
+  max-width: 100px;
+}
+
+.inte p{
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 17px;
+  background-color: #ffc107;
+  max-width: 80%;
+  border-radius: 3px;
+}
+
+/**/
+.listar > button,
+.perfil > button{
+  visibility: hidden;
 }
